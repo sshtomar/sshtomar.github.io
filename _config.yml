@@ -1,0 +1,20 @@
+# _config.yml
+title: Shubham Tomar
+description: A collection of thoughts
+url: https://sshtomar.github.io
+author: Shubham Tomar
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+paginate: 10
+paginate_path: "/page/:num/"
+
+# Gemfile
+source "https://rubygems.org"
+gem "jekyll"
+gem "jekyll-feed"
+gem "jekyll-seo-tag" 
+gem "jekyll-paginate"

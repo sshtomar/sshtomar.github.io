@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    {% seo %}
+</head>
+<body>
+    <div class="fixed" style="background:white; width:100%">
+        <div class="navigation">
+            <a href="/" style="text-decoration:none; color:black">{{ site.title }}</a>
+        </div>
+        <div class="gray" style="font-family: Roboto Mono; font-size:10pt; padding-top: 0px; color:gray;">
+            <a class="nounderline" href="/about">About</a> /
+            <a href="/categories" class="nounderline">Categories</a> /
+            <a class="nounderline" href="/archive">Archive</a>
+        </div>
+        <div class="spacer"></div>
+    </div>
+
+    <div class="post-body">
+        {{ content }}
+    </div>
+
+    <div class="footer copy">
+        Copyright &copy; {{ site.time | date: '%Y' }} {{ site.author }}.
+    </div>
+</body>
+</html>
