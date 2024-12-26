@@ -2,20 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} by @{{ site.twitter_username }}{% else %}{{ site.title }}{% endif %}</title>
     <link rel="stylesheet" href="/assets/css/custom.css">
     {% seo %}
 </head>
 <body>
     <div class="fixed" style="background:white; width:100%">
-        <div class="navigation">
+        <div class="navigation" style="">
             <a href="/" style="text-decoration:none; color:black">{{ site.title }}</a>
         </div>
+        <p class="" style="font-size:16pt">
+            Venture Capitalist at <a href="https://theory.ventures" style="text-decoration:none">Theory</a>
+        </p>
         <div class="gray" style="font-family: Roboto Mono; font-size:10pt; padding-top: 0px; color:gray;">
             <a class="nounderline" href="/about">About</a> /
             <a href="/categories" class="nounderline">Categories</a> /
-            <a class="nounderline" href="/archive">Archive</a>
+            <a class="nounderline" href="/subscribe">Subscribe</a> /
+            <a class="nounderline" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
         </div>
         <div class="spacer"></div>
     </div>

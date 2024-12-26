@@ -2,27 +2,13 @@
 layout: default
 ---
 
+<h2 class="blue">2024</h2>
+
 <div class="posts">
-    {% for post in paginator.posts %}
-    <article class="post">
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        <p class="reading-time">{{ post.content | reading_time }} / {{ post.date | date: "%b %d, %Y" }}</p>
-        <div class="content">
-            {{ post.excerpt }}
-            <p><a href="{{ post.url }}">Read more →</a></p>
+    {% for post in site.posts %}
+        <div class="post">
+            <a href="{{ post.url }}" class="title">{{ post.title }}</a>
+            <span style="float:right; color:gray">{{ post.date | date: "%B %-d" }}</span>
         </div>
-    </article>
     {% endfor %}
 </div>
-
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}">&larr; Newer</a>
-    {% endif %}
-    
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}">Older &rarr;</a>
-    {% endif %}
-</div>
-{% endif %}
