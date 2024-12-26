@@ -1,0 +1,20 @@
+current directory: /Users/shubham/sshtomar.github.io/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/Users/shubham/.rbenv/versions/3.2.6/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/shubham/sshtomar.github.io/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20241226-99219-ia7tqy sitelibdir\=./.gem.20241226-99219-ia7tqy clean
+
+current directory: /Users/shubham/sshtomar.github.io/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20241226-99219-ia7tqy sitelibdir\=./.gem.20241226-99219-ia7tqy
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/shubham/sshtomar.github.io/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20241226-99219-ia7tqy sitelibdir\=./.gem.20241226-99219-ia7tqy install
+/usr/bin/install -c -m 0755 fastfilereaderext.bundle ./.gem.20241226-99219-ia7tqy
+
+current directory: /Users/shubham/sshtomar.github.io/vendor/bundle/ruby/3.2.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20241226-99219-ia7tqy sitelibdir\=./.gem.20241226-99219-ia7tqy clean
