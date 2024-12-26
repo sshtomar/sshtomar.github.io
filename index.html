@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="posts">
+    {% for post in paginator.posts %}
+    <article class="post">
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        <p class="reading-time">{{ post.content | reading_time }} / {{ post.date | date: "%b %d, %Y" }}</p>
+        <div class="content">
+            {{ post.excerpt }}
+            <p><a href="{{ post.url }}">Read more →</a></p>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}">&larr; Newer</a>
+    {% endif %}
+    
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}">Older &rarr;</a>
+    {% endif %}
+</div>
+{% endif %}
