@@ -11,10 +11,3 @@ plugins:
   - jekyll-paginate
 paginate: 10
 paginate_path: "/page/:num/"
-
-# Gemfile
-source "https://rubygems.org"
-gem "jekyll"
-gem "jekyll-feed"
-gem "jekyll-seo-tag" 
-gem "jekyll-paginate"
