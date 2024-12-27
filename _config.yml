@@ -1,9 +1,9 @@
 # _config.yml
 title: Shubham Tomar
 description: A collection of thoughts
-url: https://sshtomar.github.io
+url: ""
 author: Shubham Tomar
-permalink: /:year/:month/:day/:title/
+permalink: /:categories/:year/:month/:day/:title/
 markdown: kramdown
 plugins:
   - jekyll-feed

@@ -1,0 +1,267 @@
+/* Font Definition */
+@font-face {
+    font-family: "MaisonNeue";
+    src: url("/fonts/MaisonNeue.woff") format('woff');
+    font-display: swap;
+  }
+  
+  /* Global Styles */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "MaisonNeue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: auto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    background: #fff;
+    color: #000;
+  }
+  
+  /* Headings */
+  h1 {
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 49.5px;
+    padding: 20px 0 30px;
+  }
+  
+  h2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: #6495ED;
+  }
+  
+  h4, h5 {
+    font-weight: 400;
+    color: rgb(92, 110, 116);
+  }
+  
+  h5 {
+    font-size: 18px;
+    padding-top: 20px;
+  }
+  
+  /* Content Styles */
+  .content {
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    word-break: break-word;
+    margin: 0;
+  }
+  
+  /* Links */
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: gray;
+    text-decoration: underline;
+  }
+  
+  .header a {
+    color: #000;
+  }
+  
+  .nounderline a, .nounderline {
+    color: gray;
+    text-decoration: none;
+  }
+  
+  /* Typography Helpers */
+  strong {
+    color: #000;
+  }
+  
+  .font12 {
+    font-size: 12pt;
+  }
+  
+  /* Lists */
+  li {
+    padding-top: 5px;
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "MaisonNeue";
+    font-weight: 300;
+    font-size: 18px;
+    color: #000;
+  }
+  
+  th {
+    border-bottom: 1px solid rgb(92, 110, 116);
+  }
+  
+  td {
+    padding-top: 5px;
+  }
+  
+  /* Media Queries */
+  @media only screen and (max-width: 600px) {
+    body {
+      width: 375px;
+      font-size: 22px;
+      line-height: 27px;
+      padding: 5px;
+      margin: 10px;
+    }
+  
+    img {
+      width: 375px;
+    }
+  }
+  
+  /* Images */
+  img {
+    width: 700px;
+    padding: 25px 0;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    color: gray;
+    font-size: 12px;
+    border-top: 1px solid #ddd;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+  }
+  
+  /* Utility Classes */
+  .gray {
+    color: rgb(92, 110, 116);
+  }
+  
+  .block {
+    display: block;
+  }
+  
+  .right {
+    float: right;
+  }
+  
+  .spacer {
+    padding-bottom: 25px;
+  }
+  
+  .blue {
+    color: #6495ED !important;
+  }
+  
+  .reading-time {
+    font-size: 14px;
+    text-align: right;
+    color: gray;
+    margin: 0;
+  }
+  
+  .title {
+    font-size: 18px;
+    line-height: 27px;
+    padding-bottom: 10px;
+  }
+  
+  blockquote {
+    font-style: italic;
+  }
+  
+  /* Code Blocks */
+  code {
+    font-size: 20px;
+    font-weight: bold;
+    background: lightgray;
+  }
+  
+  /* Fixed Header */
+  .fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 25px;
+    background: #fff;
+    z-index: 1000;
+  }
+  
+  /* Navigation */
+  .navigation {
+    font-size: 36px;
+    font-weight: 300;
+  }
+  
+  .navigation_subheader {
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+/* Navigation Styling */
+.nav-links {
+    font-family: "MaisonNeue", Arial, sans-serif;
+    font-size: 16px;
+    color: gray;
+    text-align: left; /* Ensures links are centered */
+    margin-top: 5px; /* Adjust spacing from the title */
+    display: inline-block; /* Keeps the links centered with content */
+    width: 100%;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: gray;
+    padding: 0 1px;
+    margin-bottom: 10px; /* Adds spacing between slashes and links */
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline; /* Subtle hover effect */
+  }
+  
+  /* Post List Styling */
+  
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+  }
+  
+  .post-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; /* Adds spacing between posts */
+    /* border-bottom: 1px solid #eaeaea; /* Optional: Light divider */
+  }
+  
+  .post-title a {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .post-title a:hover {
+    text-decoration: underline;
+  }
+  
+  .post-date {
+    font-size: 16px;
+    color: gray;
+    white-space: nowrap; /* Prevents date wrapping to a new line */
+  }
+  
+  
+  

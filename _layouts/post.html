@@ -1,19 +1,25 @@
 ---
 layout: default
 ---
-<p class="reading-time">{{ content | reading_time }} / {{ page.date | date: "%b %d, %Y" }}</p>
 
-<h1>{{ page.title }}</h1>
+<div class="post-body">
+  <p class="reading-time">
+    {{ page.reading_time | append: " minute read" }} / {{ page.date | date: "%b %d, %Y" }}
+  </p>
 
-<div class="content">
+  <h1>{{ page.title }}</h1>
+
+  <div class="content">
     {{ content }}
-</div>
+  </div>
 
-<hr/>
-<h4 style="padding-bottom:0px">Read More:</h4>
-{% assign posts = site.posts | where_exp:"post", "post.url != page.url" | sample:1 %}
-{% for post in posts limit:1 %}
-<h1>
-    <a class="blue" href="{{ post.url }}">{{ post.title }}</a>
-</h1>
-{% endfor %}
+  <hr>
+  
+  <h4 style="padding-bottom:0px">Read More:</h4>
+  {% assign other_posts = site.posts | where_exp: "post", "post.url != page.url" | sample:1 %}
+  {% for post in other_posts limit:1 %}
+    <h1>
+      <a class="blue" href="{{ post.url }}">{{ post.title }}</a>
+    </h1>
+  {% endfor %}
+</div>

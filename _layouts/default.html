@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} by @{{ site.twitter_username }}{% else %}{{ site.title }}{% endif %}</title>
-    <link rel="stylesheet" href="/assets/css/custom.css">
-    {% seo %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/custom.css">
 </head>
 <body>
-    <div class="fixed" style="background:white; width:100%">
-        <div class="navigation" style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="/" style="text-decoration:none; color:black">{{ site.title }}</a>
-        </div>
-        <p class="" style="font-size:16pt">
-            Venture Capitalist at <a href="https://theory.ventures" style="text-decoration:none">Theory</a>
-        </p>
-        <div class="gray" style="font-family: Roboto Mono; font-size:10pt; padding-top: 0px; color:gray;">
-            <a class="nounderline" href="/about">About</a> /
-            <a href="/categories" class="nounderline">Categories</a> /
-            <a class="nounderline" href="/subscribe">Subscribe</a> /
-            <a class="nounderline" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
-        </div>
-        <div class="spacer"></div>
+  <!-- Header Section -->
+  <header class="fixed">
+    <a href="/" style="text-decoration:none; color:black">Shubham Tomar</a>
+    <p style="font-size:16pt"> 
+      Independent Consultant, Data Scientist
+    </p>
+    <div class="nav-links">
+      <a class="nounderline" href="/about">About</a> /
+      <a class="nounderline" href="/categories">Categories</a> /
+      <a class="nounderline" href="/twitter">Twitter</a>
+    </div>      
+  </header>
+
+  <!-- Spacer to offset fixed header -->
+  <div class="spacer" style="height: 80px;"></div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page-Specific Content -->
+    <div class="content">
+      {{ content }}
     </div>
 
-    <div class="post-body">
-        {{ content }}
-    </div>
+    <!-- Posts Section -->
+    <div class="posts">
+        <ul class="post-list">
+          {% for post in site.posts %}
+            <li class="post-item">
+              <span class="post-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </span>
+              <span class="post-date">
+                {{ post.date | date: "%B %d" }}
+              </span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>      
+  </main>
 
-    <div class="footer copy">
-        Copyright &copy; {{ site.time | date: '%Y' }} {{ site.author }}.
-    </div>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p class="copy">© 2024 Shubham Tomar. All rights reserved.</p>
+  </footer>
 </body>
 </html>
