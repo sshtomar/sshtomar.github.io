@@ -130,10 +130,8 @@ td {
     padding-top: 0px;
     font-family: "MaisonNeue";
     font-weight: 200;
-    font-size:18px;
-    //color: #6495ED;
-
-    -webkit-font-smoothing:antialiased
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .gray {
