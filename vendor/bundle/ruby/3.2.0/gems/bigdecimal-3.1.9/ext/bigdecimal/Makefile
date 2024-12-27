@@ -13,12 +13,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /Users/shubham/.rbenv/versions/3.2.6/include/ruby-3.2.0
+topdir = /Users/shubham/.rbenv/versions/3.2.2/include/ruby-3.2.0
 hdrdir = $(topdir)
-arch_hdrdir = /Users/shubham/.rbenv/versions/3.2.6/include/ruby-3.2.0/arm64-darwin24
+arch_hdrdir = /Users/shubham/.rbenv/versions/3.2.2/include/ruby-3.2.0/arm64-darwin24
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/Users/shubham/.rbenv/versions/3.2.6
+prefix = $(DESTDIR)/Users/shubham/.rbenv/versions/3.2.2
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -88,7 +88,7 @@ CCDLFLAGS = -fno-common
 CFLAGS   = $(CCDLFLAGS) $(cflags)  -fno-common -pipe $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DHAVE_BUILTIN___BUILTIN_CLZ -DHAVE_BUILTIN___BUILTIN_CLZL -DHAVE_BUILTIN___BUILTIN_CLZLL -DHAVE_FLOAT_H -DHAVE_MATH_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_LABS -DHAVE_LLABS -DHAVE_RUBY_ATOMIC_H -DHAVE_RUBY_INTERNAL_HAS_BUILTIN_H -DHAVE_RUBY_INTERNAL_STATIC_ASSERT_H -DHAVE_RB_RATIONAL_NUM -DHAVE_RB_RATIONAL_DEN -DHAVE_RB_COMPLEX_REAL -DHAVE_RB_COMPLEX_IMAG -DHAVE_RB_OPTS_EXCEPTION_P -DHAVE_RB_CATEGORY_WARN -DHAVE_CONST_RB_WARN_CATEGORY_DEPRECATED -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
+CPPFLAGS = -DHAVE_BUILTIN___BUILTIN_CLZ -DHAVE_BUILTIN___BUILTIN_CLZL -DHAVE_BUILTIN___BUILTIN_CLZLL -DHAVE_FLOAT_H -DHAVE_MATH_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_LABS -DHAVE_LLABS -DHAVE_RUBY_ATOMIC_H -DHAVE_RUBY_INTERNAL_HAS_BUILTIN_H -DHAVE_RUBY_INTERNAL_STATIC_ASSERT_H -DHAVE_RB_RATIONAL_NUM -DHAVE_RB_RATIONAL_DEN -DHAVE_RB_COMPLEX_REAL -DHAVE_RB_COMPLEX_IMAG -DHAVE_RB_OPTS_EXCEPTION_P -DHAVE_RB_CATEGORY_WARN -DHAVE_CONST_RB_WARN_CATEGORY_DEPRECATED -I/opt/homebrew/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) -fdeclspec $(ARCH_FLAG)
 ldflags  = -L. -fstack-protector-strong -L/opt/homebrew/opt/gmp/lib
 dldflags = -L/opt/homebrew/opt/gmp/lib -Wl,-undefined,dynamic_lookup $(LIBRUBYARG_SHARED)

@@ -1,5 +1,5 @@
 current directory: /Users/shubham/sshtomar.github.io/vendor/bundle/ruby/3.2.0/gems/bigdecimal-3.1.9/ext/bigdecimal
-/Users/shubham/.rbenv/versions/3.2.6/bin/ruby extconf.rb
+/Users/shubham/.rbenv/versions/3.2.2/bin/ruby extconf.rb
 checking for __builtin_clz()... yes
 checking for __builtin_clzl()... yes
 checking for __builtin_clzll()... yes
@@ -26,18 +26,18 @@ checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... yes
 creating Makefile
 
 current directory: /Users/shubham/sshtomar.github.io/vendor/bundle/ruby/3.2.0/gems/bigdecimal-3.1.9/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20241226-99219-eubfat sitelibdir\=./.gem.20241226-99219-eubfat clean
+make DESTDIR\= sitearchdir\=./.gem.20241227-54995-ihnvss sitelibdir\=./.gem.20241227-54995-ihnvss clean
 
 current directory: /Users/shubham/sshtomar.github.io/vendor/bundle/ruby/3.2.0/gems/bigdecimal-3.1.9/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20241226-99219-eubfat sitelibdir\=./.gem.20241226-99219-eubfat
+make DESTDIR\= sitearchdir\=./.gem.20241227-54995-ihnvss sitelibdir\=./.gem.20241227-54995-ihnvss
 compiling bigdecimal.c
 compiling missing.c
 linking shared-object bigdecimal.bundle
 ld: warning: ignoring duplicate libraries: '-lruby.3.2'
 
 current directory: /Users/shubham/sshtomar.github.io/vendor/bundle/ruby/3.2.0/gems/bigdecimal-3.1.9/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20241226-99219-eubfat sitelibdir\=./.gem.20241226-99219-eubfat install
-/usr/bin/install -c -m 0755 bigdecimal.bundle ./.gem.20241226-99219-eubfat
+make DESTDIR\= sitearchdir\=./.gem.20241227-54995-ihnvss sitelibdir\=./.gem.20241227-54995-ihnvss install
+/usr/bin/install -c -m 0755 bigdecimal.bundle ./.gem.20241227-54995-ihnvss
 
 current directory: /Users/shubham/sshtomar.github.io/vendor/bundle/ruby/3.2.0/gems/bigdecimal-3.1.9/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20241226-99219-eubfat sitelibdir\=./.gem.20241226-99219-eubfat clean
+make DESTDIR\= sitearchdir\=./.gem.20241227-54995-ihnvss sitelibdir\=./.gem.20241227-54995-ihnvss clean

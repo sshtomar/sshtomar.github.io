@@ -13,12 +13,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /Users/shubham/.rbenv/versions/3.2.6/include/ruby-3.2.0
+topdir = /Users/shubham/.rbenv/versions/3.2.2/include/ruby-3.2.0
 hdrdir = $(topdir)
-arch_hdrdir = /Users/shubham/.rbenv/versions/3.2.6/include/ruby-3.2.0/arm64-darwin24
+arch_hdrdir = /Users/shubham/.rbenv/versions/3.2.2/include/ruby-3.2.0/arm64-darwin24
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/Users/shubham/.rbenv/versions/3.2.6
+prefix = $(DESTDIR)/Users/shubham/.rbenv/versions/3.2.2
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -88,7 +88,7 @@ CCDLFLAGS = -fno-common
 CFLAGS   = $(CCDLFLAGS) $(cflags)  -fno-common -pipe $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DBUILD_FOR_RUBY -DOS_UNIX -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
+CPPFLAGS = -DBUILD_FOR_RUBY -DOS_UNIX -I/opt/homebrew/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) -fdeclspec $(ARCH_FLAG)
 ldflags  = -L. -fstack-protector-strong -L/opt/homebrew/opt/gmp/lib
 dldflags = -L/opt/homebrew/opt/gmp/lib -Wl,-undefined,dynamic_lookup $(LIBRUBYARG_SHARED)

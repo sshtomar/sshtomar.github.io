@@ -1,0 +1,15 @@
+---
+layout: default
+title: Home
+---
+<section class="post-list">
+  <h1>2024</h1>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}" class="title">{{ post.title }}</a>
+        <p class="reading-time">{{ post.date | date: "%B %d" }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

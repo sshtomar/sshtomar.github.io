@@ -13,12 +13,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /Users/shubham/.rbenv/versions/3.2.6/include/ruby-3.2.0
+topdir = /Users/shubham/.rbenv/versions/3.2.2/include/ruby-3.2.0
 hdrdir = $(topdir)
-arch_hdrdir = /Users/shubham/.rbenv/versions/3.2.6/include/ruby-3.2.0/arm64-darwin24
+arch_hdrdir = /Users/shubham/.rbenv/versions/3.2.2/include/ruby-3.2.0/arm64-darwin24
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/Users/shubham/.rbenv/versions/3.2.6
+prefix = $(DESTDIR)/Users/shubham/.rbenv/versions/3.2.2
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -88,7 +88,7 @@ CCDLFLAGS = -fno-common
 CFLAGS   = $(CCDLFLAGS) $(cflags)  -fno-common -pipe  $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) -I/opt/homebrew/Cellar/openssl@3/3.4.0/include
 DEFS     = 
-CPPFLAGS = -DHAVE_OPENSSL_SSL_H -DHAVE_OPENSSL_ERR_H -DWITH_SSL -DBUILD_FOR_RUBY -DHAVE_RB_THREAD_CALL_WITHOUT_GVL -DHAVE_RB_THREAD_FD_SELECT -DHAVE_TYPE_RB_FDSET_T -DHAVE_RB_WAIT_FOR_SINGLE_FD -DHAVE_RB_TIME_NEW -DHAVE_WRITEV -DOS_UNIX -DHAVE_SYS_EVENT_H -DHAVE_SYS_QUEUE_H -DHAVE_KQUEUE -DOS_DARWIN -DHAVE_CLOCK_GETTIME -DHAVE_CONST_CLOCK_MONOTONIC_RAW -DHAVE_CONST_CLOCK_MONOTONIC -DHAVE_MAKE_PAIR -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
+CPPFLAGS = -DHAVE_OPENSSL_SSL_H -DHAVE_OPENSSL_ERR_H -DWITH_SSL -DBUILD_FOR_RUBY -DHAVE_RB_THREAD_CALL_WITHOUT_GVL -DHAVE_RB_THREAD_FD_SELECT -DHAVE_TYPE_RB_FDSET_T -DHAVE_RB_WAIT_FOR_SINGLE_FD -DHAVE_RB_TIME_NEW -DHAVE_WRITEV -DOS_UNIX -DHAVE_SYS_EVENT_H -DHAVE_SYS_QUEUE_H -DHAVE_KQUEUE -DOS_DARWIN -DHAVE_CLOCK_GETTIME -DHAVE_CONST_CLOCK_MONOTONIC_RAW -DHAVE_CONST_CLOCK_MONOTONIC -DHAVE_MAKE_PAIR -I/opt/homebrew/opt/openssl@3/include -I/opt/homebrew/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) -fdeclspec  $(ARCH_FLAG)
 ldflags  = -L. -fstack-protector-strong -L/opt/homebrew/opt/gmp/lib -L/opt/homebrew/Cellar/openssl@3/3.4.0/lib
 dldflags = -L/opt/homebrew/opt/gmp/lib -Wl,-undefined,dynamic_lookup $(LIBRUBYARG_SHARED)

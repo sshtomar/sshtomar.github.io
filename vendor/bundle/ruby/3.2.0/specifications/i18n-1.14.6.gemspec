@@ -16,10 +16,10 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT".freeze]
   s.post_install_message = "PSA: I18n will be dropping support for Ruby < 3.2 in the next major release (April 2025), due to Ruby's end of life for 3.1 and below (https://endoflife.date/ruby). Please upgrade to Ruby 3.2 or newer by April 2025 to continue using future versions of this gem.".freeze
   s.required_ruby_version = Gem::Requirement.new(">= 2.3.0".freeze)
-  s.rubygems_version = "3.4.19".freeze
+  s.rubygems_version = "3.4.10".freeze
   s.summary = "New wave Internationalization support for Ruby".freeze
 
-  s.installed_by_version = "3.4.19" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.4.10" if s.respond_to? :installed_by_version
 
   s.specification_version = 4
 
