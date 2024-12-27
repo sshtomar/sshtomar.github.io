@@ -1,7 +1,7 @@
 # _config.yml
 title: Shubham Tomar
 description: A collection of thoughts
-url: ""
+url: "https://sshtomar.github.io"
 author: Shubham Tomar
 permalink: /:categories/:year/:month/:day/:title/
 markdown: kramdown
