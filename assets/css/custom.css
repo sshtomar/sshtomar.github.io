@@ -139,8 +139,8 @@ body {
   left: 0;
   width: var(--sidebar-width);
   height: 100vh;
-  background: var(--color-sidebar-bg);
-  border-right: 1px solid var(--color-sidebar-border);
+  background: var(--color-bg);
+  border-right: none;
   z-index: 90;
   overflow-y: auto;
 }
