@@ -577,6 +577,57 @@ section {
   text-underline-offset: 3px;
 }
 
+/* --------------------------------------------------------------------------
+   Reading Page
+   -------------------------------------------------------------------------- */
+.reading-content {
+  max-width: 100%;
+}
+
+.reading-content h1 {
+  margin-bottom: var(--space-4);
+}
+
+.reading-content > p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-8);
+}
+
+.reading-section {
+  margin-bottom: var(--space-8);
+}
+
+.reading-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reading-list li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.reading-list li:last-child {
+  border-bottom: none;
+}
+
+.reading-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.reading-author {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
 /* More writing section (post pages) */
 .more-writing {
   margin-top: var(--space-8);
