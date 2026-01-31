@@ -1,12 +1,61 @@
 ---
 layout: default
+title: Home
 ---
 
-<div class="posts">
+<section class="hero-section animate-in">
+  <h1 class="hero-title">Shubham Tomar</h1>
+  <p class="hero-subtitle">Machine Learning Engineer exploring the intersection of AI, product, and craft.</p>
+</section>
+
+<section class="bio-section animate-in delay-1">
+  <h2 class="section-heading">Bio</h2>
+  <div class="section-content">
+    <p>I'm a Machine Learning Engineer and Consultant currently working on a project to help a large Swedish Mining and Drilling equipment manufacturer build RAG applications.</p>
+    <p>In the past, I have worked in EdTech with companies like Coursera and Udacity, helping build learning experiences that reach millions of students worldwide.</p>
+  </div>
+</section>
+
+<section class="background-section animate-in delay-2">
+  <h2 class="section-heading">Background</h2>
+  <div class="section-content">
+    <p>My journey in tech has been driven by curiosity about how we can use technology to solve meaningful problems. I've worked across the full stack of machine learning projects—from data engineering and model development to deployment and productionization.</p>
+    <p>I believe the best ML solutions come from deep understanding of both the technical landscape and the real-world problems we're trying to solve.</p>
+  </div>
+</section>
+
+<section class="philosophy-section animate-in delay-3">
+  <h2 class="section-heading">Philosophy</h2>
+  <div class="section-content">
+    <p>I'm fascinated by the intersection of technology and human learning. How can we build systems that augment human intelligence rather than replace it? How do we create AI that's interpretable, reliable, and actually useful?</p>
+    <p>These questions drive my work and my writing. I believe in learning in public, sharing what I discover along the way, and building a community of practitioners who care about doing this work thoughtfully.</p>
+  </div>
+</section>
+
+<section class="interests-section animate-in delay-4">
+  <h2 class="section-heading">Interests</h2>
+  <div class="section-content">
+    <p>Beyond ML and software engineering, I'm interested in:</p>
+    <ul class="interests-list">
+      <li>Product thinking and how great products are built</li>
+      <li>Educational technology and learning sciences</li>
+      <li>The craft of writing and clear communication</li>
+      <li>Building sustainable, maintainable systems</li>
+    </ul>
+  </div>
+</section>
+
+<section id="writing" class="writing-section animate-in delay-5">
+  <h2 class="section-heading">Writing</h2>
+  <p class="section-description">Thoughts on machine learning, software engineering, and building products.</p>
+  <ul class="post-list">
     {% for post in site.posts %}
-        <div class="post">
-            <a href="{{ post.url }}" class="title">{{ post.title }}</a>
-            <span style="float:right; color:gray">{{ post.date | date: "%B %-d" }}</span>
-        </div>
+    <li>
+      <a href="{{ post.url | relative_url }}">
+        <span class="post-title">{{ post.title }}</span>
+        <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
+      </a>
+    </li>
     {% endfor %}
-</div>  
+  </ul>
+</section>
