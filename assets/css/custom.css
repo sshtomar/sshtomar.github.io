@@ -752,17 +752,29 @@ td {
 @media (max-width: 991px) {
   .mobile-header {
     display: flex;
+    padding: 0 var(--space-4);
   }
 
   .sidebar {
     transform: translateX(-100%);
     transition: transform var(--transition-medium);
     box-shadow: none;
+    background: var(--color-surface);
   }
 
   .sidebar.mobile-open {
     transform: translateX(0);
     box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Prevent body scroll when menu open */
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .sidebar-nav a {
+    padding: var(--space-3) var(--space-2);
+    font-size: 1.125rem;
   }
 
   .main-content {
@@ -771,32 +783,177 @@ td {
   }
 
   .content-wrapper {
-    padding: var(--space-4) var(--space-3);
+    padding: var(--space-6) var(--space-4);
   }
 }
 
 /* Mobile */
 @media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+
+  .mobile-header {
+    padding: 0 var(--space-3);
+  }
+
   .content-wrapper {
-    padding: var(--space-3) var(--space-2);
+    padding: var(--space-4) var(--space-4);
+  }
+
+  /* Hero adjustments */
+  .hero-section {
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  /* Section spacing */
+  section {
+    margin-bottom: var(--space-6);
+  }
+
+  .section-heading {
+    font-size: 0.75rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .section-content p {
+    margin-bottom: var(--space-2);
+  }
+
+  /* Writing section */
+  .writing-section {
+    padding-top: var(--space-4);
+    margin-top: var(--space-6);
   }
 
   .post-list a {
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    gap: var(--space-1);
+    padding: var(--space-3) var(--space-2);
   }
 
   .post-list .post-title {
     font-size: 1rem;
+    line-height: 1.4;
   }
 
   .post-list .post-date {
+    font-size: 0.8125rem;
+  }
+
+  /* Post page */
+  .post-header h1 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+
+  .post-meta {
     font-size: 0.875rem;
   }
 
-  section {
+  /* Prose on mobile */
+  .prose {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .prose h2 {
+    font-size: 1.375rem;
+    margin-top: var(--space-6);
+  }
+
+  .prose h3 {
+    font-size: 1.125rem;
+    margin-top: var(--space-4);
+  }
+
+  .prose blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: var(--space-3);
+  }
+
+  .prose pre {
+    font-size: 0.8125rem;
+    padding: var(--space-3);
+    margin-left: calc(-1 * var(--space-4));
+    margin-right: calc(-1 * var(--space-4));
+    border-radius: 0;
+  }
+
+  .prose code {
+    font-size: 0.8125em;
+    word-break: break-word;
+  }
+
+  /* Tables on mobile - horizontal scroll */
+  .prose table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Reading page */
+  .reading-content > p {
     margin-bottom: var(--space-6);
+  }
+
+  .reading-section {
+    margin-bottom: var(--space-6);
+  }
+
+  .reading-title {
+    font-size: 1rem;
+  }
+
+  .reading-author {
+    font-size: 0.875rem;
+  }
+
+  /* Footer */
+  .content-footer {
+    margin-top: var(--space-6);
+    padding: var(--space-3);
+  }
+
+  .content-footer p {
+    font-size: 0.8125rem;
+  }
+
+  /* More writing */
+  .more-writing {
+    margin-top: var(--space-6);
+    padding-top: var(--space-4);
+  }
+
+  .more-writing a {
+    font-size: 1rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 374px) {
+  html {
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .content-wrapper {
+    padding: var(--space-3) var(--space-3);
   }
 }
 
