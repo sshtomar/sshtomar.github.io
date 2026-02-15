@@ -11,7 +11,7 @@ title: About
 
 <p>In the past, I have worked in EdTech with companies like Coursera and Udacity, helping build learning experiences that reach millions of students worldwide.</p>
 
-<h2 class="section-heading" style="margin-top: 48px;">What I Do</h2>
+<h2 class="section-heading">What I Do</h2>
 
 <p>I work across the full stack of machine learning projects—from data engineering and model development to deployment and productionization. I'm particularly interested in:</p>
 
@@ -22,7 +22,7 @@ title: About
   <li>Product thinking and engineering</li>
 </ul>
 
-<h2 class="section-heading" style="margin-top: 48px;">About This Site</h2>
+<h2 class="section-heading">About This Site</h2>
 
 <p>This blog is a collection of my thoughts on Machine Learning, Software Engineering, Product Management, and life in general. I believe in learning in public and sharing what I discover along the way.</p>
 

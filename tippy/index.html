@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tippy — AI Tip Calculator</title>
+<meta name="description" content="Never overtip or undertip again. Tippy uses AI and your location to recommend tips that match local customs.">
+<meta name="theme-color" content="#C17F59">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --primary: #C17F59;
+    --primary-light: #E8A87C;
+    --ink: #1B2838;
+    --text: #3A3A4A;
+    --text-secondary: #6B6B7B;
+    --surface: #F5EDE4;
+    --surface-light: #FAF6F1;
+    --white: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    background: var(--surface-light);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(165deg, var(--ink) 0%, #2C1810 50%, var(--ink) 100%);
+    color: var(--white);
+    padding: 80px 24px 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: -80px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: rgba(193,127,89,0.12);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -60px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(193,127,89,0.08);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 span {
+    color: var(--primary-light);
+  }
+
+  .hero p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto 32px;
+  }
+
+  .app-store-badge {
+    display: inline-block;
+    transition: transform 0.2s;
+  }
+
+  .app-store-badge:hover {
+    transform: scale(1.05);
+  }
+
+  .app-store-badge img {
+    height: 54px;
+  }
+
+  /* Features */
+  .features {
+    padding: 80px 24px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .features h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--ink);
+    text-align: center;
+    margin-bottom: 48px;
+    letter-spacing: -0.5px;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .feature-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .feature-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* How it works */
+  .how-it-works {
+    background: var(--white);
+    padding: 80px 24px;
+  }
+
+  .how-it-works-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .how-it-works h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--ink);
+    text-align: center;
+    margin-bottom: 48px;
+    letter-spacing: -0.5px;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 36px;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .step p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* Privacy */
+  .privacy {
+    padding: 60px 24px;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .privacy h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .privacy p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.5);
+    padding: 40px 24px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  footer a {
+    color: var(--primary-light);
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  footer .footer-links {
+    margin-bottom: 16px;
+  }
+
+  footer .footer-links a {
+    margin: 0 12px;
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="logo">
+        <img src="appicon.png" alt="Tippy App Icon">
+      </div>
+      <h1>Tip Smart.<br><span>Never Guess Again.</span></h1>
+      <p>Tippy uses AI and your location to recommend tips that match local customs. No more awkward moments.</p>
+      <!-- Replace # with your actual App Store link once live -->
+      <a class="app-store-badge" href="#">
+        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
+      </a>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Why Tippy</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon" style="background: #FFF3E0;">
+          <span>&#10024;</span>
+        </div>
+        <h3>AI-Powered Tips</h3>
+        <p>Get smart recommendations based on service type, quality, group size, and occasion. Not just a percentage calculator.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: #E3F2FD;">
+          <span>&#127759;</span>
+        </div>
+        <h3>Location-Aware</h3>
+        <p>Tippy adjusts for regional customs so you never accidentally insult your server or overpay as a tourist.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: #E8F5E9;">
+          <span>&#128247;</span>
+        </div>
+        <h3>Scan Your Receipt</h3>
+        <p>Point your camera at the bill. Tippy reads the total automatically so you don't have to squint or type.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: #FCE4EC;">
+          <span>&#128218;</span>
+        </div>
+        <h3>29-Category Guide</h3>
+        <p>From restaurants to tattoo artists to movers. Know the expected range before the check arrives.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: #F3E5F5;">
+          <span>&#128172;</span>
+        </div>
+        <h3>Plain-English Explanations</h3>
+        <p>Tippy tells you why it recommends what it does. Understand the reasoning, not just the number.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: #FFF8E1;">
+          <span>&#128274;</span>
+        </div>
+        <h3>Private by Design</h3>
+        <p>No account needed. No tracking. Your location is used only to tailor tips and is never stored.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="how-it-works-inner">
+      <h2>How It Works</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div>
+          <h3>Enter your bill</h3>
+          <p>Type the amount or scan your receipt with the camera.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div>
+          <h3>Pick the service</h3>
+          <p>Choose from 12 service types: restaurant, bar, rideshare, salon, delivery, and more.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div>
+          <h3>Add context</h3>
+          <p>Optionally tag the situation: excellent service, date night, large group, happy hour.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div>
+          <h3>Get your tip</h3>
+          <p>Tippy gives you a recommendation with a plain-English explanation of why.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="privacy">
+    <h2>Your Privacy Matters</h2>
+    <p>Tippy uses your approximate location only to tailor tip recommendations to local customs. Your location is never stored or shared. No account is required, no personal data is collected, and there are no ads. Receipt images are processed for the bill total and immediately discarded.</p>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:tomarshubham1010@gmail.com">Support</a>
+    </div>
+    <div>&copy; 2026 Tippy. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

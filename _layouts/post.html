@@ -19,8 +19,8 @@ layout: default
   {% if other_posts.size > 0 %}
   <div class="more-writing">
     <h3>Continue reading</h3>
-    {% assign random_post = other_posts | sample: 1 | first %}
-    <a href="{{ random_post.url }}">{{ random_post.title }}</a>
+    {% assign next_post = other_posts | first %}
+    <a href="{{ next_post.url }}">{{ next_post.title }}</a>
   </div>
   {% endif %}
 </article>

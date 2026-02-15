@@ -5,11 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Disease of Obsession – Shubham Tomar</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/custom.css">
 
@@ -21,42 +16,26 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="We often discuss work-life balance, but rarely work-life obsession. Yet every great achievement stems from someone’s inability to let go, to stop thinking, to “switch off.”" />
 <meta property="og:description" content="We often discuss work-life balance, but rarely work-life obsession. Yet every great achievement stems from someone’s inability to let go, to stop thinking, to “switch off.”" />
-<link rel="canonical" href="http://localhost:4000/2024/12/26/obsession/" />
-<meta property="og:url" content="http://localhost:4000/2024/12/26/obsession/" />
+<link rel="canonical" href="https://sshtomar.github.io/2024/12/26/obsession/" />
+<meta property="og:url" content="https://sshtomar.github.io/2024/12/26/obsession/" />
 <meta property="og:site_name" content="Shubham Tomar" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-12-26T00:00:00+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="The Disease of Obsession" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shubham Tomar"},"dateModified":"2024-12-26T00:00:00+05:30","datePublished":"2024-12-26T00:00:00+05:30","description":"We often discuss work-life balance, but rarely work-life obsession. Yet every great achievement stems from someone’s inability to let go, to stop thinking, to “switch off.”","headline":"The Disease of Obsession","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2024/12/26/obsession/"},"url":"http://localhost:4000/2024/12/26/obsession/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shubham Tomar"},"dateModified":"2024-12-26T00:00:00+05:30","datePublished":"2024-12-26T00:00:00+05:30","description":"We often discuss work-life balance, but rarely work-life obsession. Yet every great achievement stems from someone’s inability to let go, to stop thinking, to “switch off.”","headline":"The Disease of Obsession","mainEntityOfPage":{"@type":"WebPage","@id":"https://sshtomar.github.io/2024/12/26/obsession/"},"url":"https://sshtomar.github.io/2024/12/26/obsession/"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Shubham Tomar" />
+  <link type="application/atom+xml" rel="alternate" href="https://sshtomar.github.io/feed.xml" title="Shubham Tomar" />
 </head>
 <body>
-  <!-- Mobile Header -->
-  <header class="mobile-header">
-    <a href="/" class="mobile-title">Shubham Tomar</a>
-    <button class="mobile-menu-toggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </header>
-
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar">
-    <div class="sidebar-content">
-      <a href="/" class="sidebar-title">Shubham Tomar</a>
-      <nav class="sidebar-nav">
-        <a href="/" >Home</a>
-        <a href="/reading" >Reading</a>
-        <a href="#writing" >Writing</a>
-        <a href="/about" >About</a>
-      </nav>
-    </div>
-  </aside>
+  <!-- Navigation — fixed top-left -->
+  <nav class="site-nav">
+    
+    <a href="/" class="back-link">&larr; Home</a>
+    
+  </nav>
 
   <!-- Main Content -->
   <main class="main-content">
@@ -85,35 +64,22 @@
 
   
   
+  <div class="more-writing">
+    <h3>Continue reading</h3>
+    
+    <a href="/2025/01/31/the-engineer-who-writes/">The Engineer Who Writes</a>
+  </div>
+  
 </article>
 
     </div>
 
     <footer class="content-footer">
-      <p>&copy; 2026 Shubham Tomar. All rights reserved.</p>
+      <p>&copy; 2026 Shubham Tomar</p>
     </footer>
   </main>
 
   <script>
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const sidebar = document.querySelector('.sidebar');
-
-    menuToggle.addEventListener('click', function() {
-      sidebar.classList.toggle('mobile-open');
-      this.classList.toggle('active');
-    });
-
-    // Close sidebar when clicking outside on mobile
-    document.addEventListener('click', function(event) {
-      if (window.innerWidth < 992) {
-        if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
-          sidebar.classList.remove('mobile-open');
-          menuToggle.classList.remove('active');
-        }
-      }
-    });
-
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -121,11 +87,6 @@
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          // Close mobile menu after clicking
-          if (window.innerWidth < 992) {
-            sidebar.classList.remove('mobile-open');
-            menuToggle.classList.remove('active');
-          }
         }
       });
     });
