@@ -64,7 +64,7 @@
 <div class="container">
 
 <h1>Privacy Policy</h1>
-<p class="date">Effective: February 15, 2026</p>
+<p class="date">Effective: February 20, 2026</p>
 
 <p>Tippy ("the App") is developed by Shubham Tomar. This policy describes how the App handles your information.</p>
 
@@ -73,7 +73,9 @@
 <ul>
   <li><strong>Approximate location</strong> — Used to tailor tip recommendations to regional customs. Your location is sent to our AI service to generate recommendations and is not stored.</li>
   <li><strong>Camera images</strong> — When you use receipt scanning, your camera captures an image of the receipt. The image is processed to extract the bill total and is immediately discarded. It is not stored on our servers.</li>
-  <li><strong>Bill amounts and service selections</strong> — Used to calculate your tip recommendation. This data stays on your device.</li>
+  <li><strong>Bill amounts and service selections</strong> — Used to calculate your tip recommendation. When you enable AI-powered tips, this data is sent to Anthropic's Claude AI to generate personalized recommendations.</li>
+  <li><strong>Context and notes</strong> — Any context tags you select (e.g., "great service," "large group") and free-text notes you enter may be sent to Anthropic's Claude AI when generating AI-powered recommendations.</li>
+  <li><strong>Receipt text</strong> — When you scan a receipt with AI features enabled, the text extracted from the receipt image is sent to Anthropic's Claude AI to identify the bill total, service type, and venue details. The original image is not sent.</li>
 </ul>
 
 <h2>Information We Do Not Collect</h2>
@@ -81,11 +83,22 @@
   <li>We do not collect your name, email, or any account information</li>
   <li>We do not use analytics or tracking tools</li>
   <li>We do not display advertisements</li>
-  <li>We do not sell or share any data with third parties</li>
+  <li>We do not sell your data or share it with third parties for marketing or advertising purposes</li>
 </ul>
 
-<h2>Third-Party Services</h2>
-<p>Tippy uses the Anthropic API (Claude) to generate AI-powered tip recommendations. When you request a recommendation, your bill amount, service type, context tags, and approximate location are sent to Anthropic's servers. Anthropic's privacy policy is available at <a href="https://www.anthropic.com/privacy">anthropic.com/privacy</a>.</p>
+<h2>Third-Party AI Service — Anthropic (Claude)</h2>
+<p>Tippy uses Anthropic's Claude AI to generate personalized tip recommendations. <strong>Your explicit consent is required before any data is sent to Anthropic.</strong> When you first use the app, you are asked whether you want to enable AI-powered tips. You can decline and still use the app with built-in offline tipping rules.</p>
+
+<p>If you enable AI tips, the following data may be sent to Anthropic's servers when you request a recommendation:</p>
+<ul>
+  <li>Bill amount and service type (e.g., restaurant, salon)</li>
+  <li>Context tags you select (e.g., "great service," "holiday")</li>
+  <li>Free-text notes you provide about your tipping situation</li>
+  <li>Text extracted from scanned receipts (venue name, itemized amounts)</li>
+  <li>Your approximate location (city and state only)</li>
+</ul>
+
+<p>This data is sent solely to generate your tip recommendation and is not stored by Tippy after the recommendation is delivered. Anthropic processes this data under their <a href="https://www.anthropic.com/privacy">privacy policy</a> and does not use data sent via their API to train AI models. No other third-party services receive your data.</p>
 
 <h2>In-App Purchases</h2>
 <p>Tippy Pro subscriptions are processed entirely through Apple's App Store. We do not have access to your payment information.</p>
